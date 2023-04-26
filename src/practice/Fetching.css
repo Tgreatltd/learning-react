@@ -1,0 +1,34 @@
+.fet{
+text-align: center;
+background-image: linear-gradient(to bottom, red, blue, green, yellow,green);
+height: 750px;
+width: 100%;
+display: grid;
+align-items: center;
+}
+input{
+width: 400px;
+height: 50px;
+margin: 0px;
+margin-bottom: 20px;
+border: 2px solid green;
+padding-left: 10px;
+border-radius: 10px;
+color: red;
+font-size: 20px;
+}
+.sub{
+height: 50px;
+width: 400px;
+background-color: blue;
+font-size: 20px;
+color: red;
+border: 2px solid yellow;
+border-radius: 10px;
+}
+.feed{
+color: red;
+}
+.you{
+color: red;
+}
