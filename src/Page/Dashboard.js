@@ -18,6 +18,7 @@ label:'Wallet'
 },
 
 ]
+
 const info =options.map((el)=><li key={el.label}>
     <Link className='link' to={el.link}>{el.label}</Link>
 </li>)
@@ -28,7 +29,7 @@ const info =options.map((el)=><li key={el.label}>
             {info}
         </ul>
     </nav>
-    <div className='container'>
+    <div className='container-fluid'>
         <div className='side'></div>
         <div className='content'>
             <button onClick={()=>redirect("/")}>GO home</button>

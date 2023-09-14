@@ -16,6 +16,18 @@ import Butt from './props/Butt';
 import List from './List';
 import Forming from './FormComponent/Forming';
 import Format from './FormComponent/Format';
+import Login from './FormComponent/Login';
+import Book from './identity/Book';
+import Books from './identity/Books';
+import Newbook from './identity/Newbook';
+import Effecting from './EffectsComponent/Effecting';
+import Pro from './FormComponent/Pro';
+import FirstPage from './submission/FirstPage';
+import SecondPage from './submission/SecondPage';
+import ProfilePage from './submission/ProfilePage';
+import LoginPage from './submission/LoginPage';
+import AboutPage from './submission/AboutPage';
+import Pifetching from './practice/Pifetching';
 
 const router= createBrowserRouter([
   {
@@ -31,12 +43,24 @@ const router= createBrowserRouter([
     element:<Todo/>
   },
   {
+    path:'/login',
+    element:<Login/>
+  },
+  {
     path:'/form',
     element:<Forming/>
   },
   {
     path:'/list',
     element:<List/>
+  },
+  {
+    path:'/pi',
+    element:<Pifetching/>
+  },
+  {
+    path:'/profileuser',
+    element:<Pro/>
   },
   {
     path:'/buttons',
@@ -49,6 +73,14 @@ const router= createBrowserRouter([
   {
     path:"/about",
     element:<About/>
+  },
+  {
+    path:"/data",
+    element:<Effecting/>
+  },
+  {
+    path:"/book/:id",
+    element:<Book/>
   },
   {
     path:"/dashboard",
@@ -64,10 +96,51 @@ const router= createBrowserRouter([
       },
     ]
   },
+
+  {
+   path:"/books",
+   children:[
+   { 
+    index:true,
+    element:<Books/>
+  },
+  {
+    path:"new",
+    element:<Newbook/>
+  },
+   ]
+  },
+
+  {
+    path:'/submit',
+    element:<FirstPage/>,
+    children:[
+      {
+        path:'/submit',
+        element:<AboutPage/>
+      },
+      {path:'/submit/second',
+      element:<SecondPage/>
+      },
+      {path:'/submit/profilepage',
+       element:<ProfilePage/>
+     },
+     {
+      path:'/submit/loginpage',
+      element:<LoginPage/>
+     },
+     {
+      path:'/submit/register',
+      element:<Forming/>
+     }
+    ]
+   },
   {
     path:"*",
     element:<Error/>,
-  }
+  },
+ 
+
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

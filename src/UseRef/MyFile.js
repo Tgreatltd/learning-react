@@ -3,7 +3,7 @@ const MyFile = ({tobi}) => {
 console.log(tobi);
   return (
     <div>
-    
+       
     </div>
   )
 }

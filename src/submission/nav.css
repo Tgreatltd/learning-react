@@ -1,0 +1,19 @@
+#display{
+display: flex;
+}
+#side1{
+width: 20%;
+background-color: red;
+height: 100%;
+}
+
+#content{
+width: 60%;
+height: 100%;
+margin-left: 20px;
+}
+#side2{
+width: 20%;
+height: 100%;
+background-color: red;
+}

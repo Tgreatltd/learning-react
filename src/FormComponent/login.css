@@ -1,0 +1,12 @@
+#container{
+display:flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+#container2{
+width: 60%;
+}
+#container2 input{
+/* height: 7vh; */
+}
